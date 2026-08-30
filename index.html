@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Flight Booking</title>
+<style>
+:root{--primary:#1677ff;--primary2:#005bea;--text:#172033;--muted:#687386;--line:#e6eaf0;--bg:#f5f7fb;--white:#fff;--shadow:0 18px 45px rgba(23,32,51,.12)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--bg)}
+.hero{min-height:430px;background:linear-gradient(135deg,#0067ff,#25a7ff);padding:38px 20px 110px;color:white;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-180px;top:-250px;background:rgba(255,255,255,.10)}
+.nav{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}.brand{font-weight:800;font-size:25px;letter-spacing:-.5px}.nav span{font-size:14px;opacity:.9}
+.hero h1{max-width:1180px;margin:55px auto 10px;font-size:42px;line-height:1.1;position:relative;z-index:2}.hero p{max-width:1180px;margin:0 auto;font-size:17px;opacity:.9;position:relative;z-index:2}
+.wrap{max-width:1180px;margin:-78px auto 60px;padding:0 18px;position:relative;z-index:5}.card{background:var(--white);border-radius:18px;box-shadow:var(--shadow);padding:24px}.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-bottom:20px}.tab{padding:10px 2px 14px;border:0;background:none;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer}.tab.active{color:var(--primary);border-bottom:3px solid var(--primary)}
+.triprow{display:flex;gap:20px;align-items:center;margin-bottom:18px}.radio{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}.radio input{accent-color:var(--primary)}
+.grid{display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#fff;position:relative}.field label{display:block;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font-size:15px;font-weight:650;color:var(--text);background:transparent}.airport-input{padding-right:4px}.swap{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:white;box-shadow:0 4px 12px rgba(0,0,0,.08);cursor:pointer;font-size:18px;flex:none;margin:0 -5px;z-index:2}
+.passengers{cursor:pointer}.passenger-panel{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:0 15px 35px rgba(0,0,0,.14);z-index:20}.passenger-panel.open{display:block}.p-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0}.p-row small{color:var(--muted)}.counter{display:flex;align-items:center;gap:10px}.counter button{width:29px;height:29px;border-radius:50%;border:1px solid #ccd3df;background:#fff;cursor:pointer}.counter b{min-width:18px;text-align:center}
+.actions{display:flex;justify-content:flex-end;margin-top:18px}.search-btn{border:0;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:white;font-size:16px;font-weight:800;padding:15px 30px;cursor:pointer;box-shadow:0 9px 22px rgba(0,91,234,.25)}.search-btn:hover{transform:translateY(-1px)}
+.info{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info-box{background:white;border-radius:14px;padding:20px;box-shadow:0 6px 22px rgba(23,32,51,.06)}.info-box strong{display:block;margin-bottom:6px}.info-box span{font-size:13px;color:var(--muted)}
+.autocomplete{position:absolute;left:0;right:0;top:74px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,.14);max-height:280px;overflow:auto;display:none;z-index:30}.suggestion{padding:11px 13px;cursor:pointer}.suggestion:hover{background:#f2f6ff}.suggestion strong{font-size:14px}.suggestion small{display:block;color:var(--muted);margin-top:2px}
+.hidden{display:none!important}.error{margin-top:12px;color:#c62828;font-size:13px;font-weight:650;display:none}.footer{text-align:center;color:var(--muted);font-size:12px;padding:0 20px 35px}
+@media(max-width:850px){.hero h1{font-size:31px}.grid{grid-template-columns:1fr 1fr}.triprow{flex-wrap:wrap}.info{grid-template-columns:1fr}.swap{transform:rotate(90deg);margin:-4px auto}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding-bottom:125px}.wrap{margin-top:-105px}.card{padding:16px}.tabs{gap:15px}.search-btn{width:100%}}
+
+/* Mobile-first enhancements */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+button,input,select{font:inherit}
+input,select{min-height:44px}
+@media (max-width: 560px){
+  body{padding-bottom:82px;overflow-x:hidden}
+  .hero{min-height:330px;padding:20px 14px 130px}
+  .nav{align-items:flex-start}.brand{font-size:21px}.nav span{font-size:11px;text-align:right;max-width:145px;line-height:1.35}
+  .hero h1{font-size:28px;margin:38px 0 9px;line-height:1.12}.hero p{font-size:14px;line-height:1.5}
+  .wrap{margin:-105px 0 28px;padding:0 10px}
+  .card{padding:14px;border-radius:16px;box-shadow:0 10px 30px rgba(23,32,51,.13)}
+  .tabs{gap:4px;margin-bottom:14px}.tab{flex:1;padding:11px 4px;font-size:13px}
+  .triprow{gap:14px;margin-bottom:13px}.radio{font-size:13px}
+  .grid{display:flex;flex-direction:column;gap:10px}
+  .field{width:100%;padding:9px 11px;border-radius:11px}.field label{font-size:10px;margin-bottom:2px}.field input,.field select{font-size:14px}
+  .swap{width:42px;height:42px;align-self:center;transform:rotate(90deg);margin:-3px 0;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+  .autocomplete{top:70px;max-height:220px;border-radius:11px}.suggestion{padding:12px}.suggestion strong{font-size:13px}.suggestion small{font-size:11px}
+  .passenger-panel{position:fixed;left:10px;right:10px;top:auto;bottom:78px;border-radius:16px;padding:14px;box-shadow:0 12px 40px rgba(0,0,0,.22);z-index:100}
+  .p-row{padding:12px 2px}.counter button{width:38px;height:38px;font-size:18px}.counter{gap:12px}
+  .actions{margin-top:12px}.actions .search-btn{display:none}
+  .mobile-book{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:90;height:58px;border-radius:15px;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;font-weight:800;font-size:15px;box-shadow:0 8px 25px rgba(0,91,234,.35);text-decoration:none}
+  .info{gap:9px;margin-top:14px}.info-box{padding:14px;border-radius:12px}.info-box strong{font-size:14px}.info-box span{font-size:12px;line-height:1.45}
+  .footer{font-size:10px;padding:0 15px 18px}
+}
+@media (min-width:561px){.mobile-book{display:none!important}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="nav"><div class="brand">YOUR TRAVEL</div><span>Worldwide flights • Fast WhatsApp booking</span></div>
+  <h1>Search flights around the world</h1>
+  <p>Choose your route, travel dates and passengers. Send your flight request directly to WhatsApp.</p>
+</section>
+
+<main class="wrap">
+  <div class="card">
+    <div class="tabs">
+      <button class="tab active" data-type="roundtrip">Round Trip</button>
+      <button class="tab" data-type="oneway">One Way</button>
+    </div>
+
+    <div class="triprow">
+      <label class="radio"><input type="radio" name="trip" value="roundtrip" checked> Round Trip</label>
+      <label class="radio"><input type="radio" name="trip" value="oneway"> One Way</label>
+    </div>
+
+    <div class="grid">
+      <div class="field airport-field" id="fromField">
+        <label>From</label>
+        <input id="from" class="airport-input" autocomplete="off" placeholder="City or airport" />
+        <div id="fromSuggestions" class="autocomplete"></div>
+      </div>
+      <button class="swap" id="swap" title="Swap airports">⇄</button>
+      <div class="field airport-field" id="toField">
+        <label>To</label>
+        <input id="to" class="airport-input" autocomplete="off" placeholder="City or airport" />
+        <div id="toSuggestions" class="autocomplete"></div>
+      </div>
+      <div class="field"><label>Departure</label><input type="date" id="departure" /></div>
+      <div class="field" id="returnField"><label>Return</label><input type="date" id="returnDate" /></div>
+      <div class="field"><label>Cabin Class</label><select id="cabin"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First Class</option></select></div>
+      <div class="field passengers" id="passengerField"><label>Passengers</label><input id="passengerSummary" value="1 Adult, 0 Kids" readonly />
+        <div class="passenger-panel" id="passengerPanel">
+          <div class="p-row"><div><b>Adults</b><br><small>12+ years</small></div><div class="counter"><button data-key="adults" data-delta="-1">−</button><b id="adultCount">1</b><button data-key="adults" data-delta="1">+</button></div></div>
+          <div class="p-row"><div><b>Kids</b><br><small>2–11 years</small></div><div class="counter"><button data-key="kids" data-delta="-1">−</button><b id="kidCount">0</b><button data-key="kids" data-delta="1">+</button></div></div>
+        </div>
+      </div>
+    </div>
+    <div id="error" class="error"></div>
+    <div class="actions"><button class="search-btn" id="search">Search & Book on WhatsApp</button></div>
+  </div>
+
+  <div class="info">
+    <div class="info-box"><strong>🌎 Worldwide Airports</strong><span>Search airports by city, country, airport name or IATA code.</span></div>
+    <div class="info-box"><strong>💬 Direct WhatsApp</strong><span>Your selected route and passenger details are automatically included.</span></div>
+    <div class="info-box"><strong>✈️ Flexible Travel</strong><span>Round-trip or one-way flights with multiple cabin classes.</span></div>
+  </div>
+</main>
+<a href="#" class="mobile-book" id="mobileBook">Search & Book on WhatsApp</a>
+<div class="footer">© 2026 Your Travel. Replace the WhatsApp number in the script before publishing.</div>
+
+<script>
+/* =========================
+   CONFIGURATION
+   ========================= */
+const WHATSAPP_NUMBER = "6281234567890"; // IMPORTANT: country code + number, no +, spaces or leading 0
+const AIRPORTS_URL = "./airports.json";
+
+let airports = [];
+let passengers = { adults: 1, kids: 0 };
+
+const $ = id => document.getElementById(id);
+const today = new Date().toISOString().split('T')[0];
+$('departure').min = today;
+$('returnDate').min = today;
+
+function parseCSVLine(line){
+  const out=[]; let cur='', quoted=false;
+  for(let i=0;i<line.length;i++){
+    const c=line[i], n=line[i+1];
+    if(c==='"' && quoted && n==='"'){cur+='"'; i++; continue;}
+    if(c==='"'){quoted=!quoted; continue}
+    if(c===',' && !quoted){out.push(cur);cur='';} else cur+=c;
+  }
+  out.push(cur); return out;
+}
+function loadAirports(){
+  fetch(AIRPORTS_URL)
+    .then(r=>{if(!r.ok) throw new Error("Airport database could not be loaded"); return r.json();})
+    .then(data=>{ airports = data.filter(a=>a.iata && a.city && a.name); })
+    .catch(()=>{
+      airports=[
+        {name:'Soekarno-Hatta International Airport',city:'Jakarta',country:'Indonesia',iata:'CGK'},
+        {name:'Ninoy Aquino International Airport',city:'Manila',country:'Philippines',iata:'MNL'},
+        {name:'Singapore Changi Airport',city:'Singapore',country:'Singapore',iata:'SIN'},
+        {name:'Kuala Lumpur International Airport',city:'Kuala Lumpur',country:'Malaysia',iata:'KUL'},
+        {name:'Dubai International Airport',city:'Dubai',country:'United Arab Emirates',iata:'DXB'},
+        {name:'London Heathrow Airport',city:'London',country:'United Kingdom',iata:'LHR'},
+        {name:'John F. Kennedy International Airport',city:'New York',country:'United States',iata:'JFK'},
+        {name:'Los Angeles International Airport',city:'Los Angeles',country:'United States',iata:'LAX'},
+        {name:'Sydney Kingsford Smith Airport',city:'Sydney',country:'Australia',iata:'SYD'},
+        {name:'Hong Kong International Airport',city:'Hong Kong',country:'Hong Kong',iata:'HKG'}
+      ];
+    });
+}
+loadAirports();
+
+function setupAutocomplete(inputId, boxId){
+  const input=$(inputId), box=$(boxId);
+  input.addEventListener('input',()=>{
+    const q=input.value.trim().toLowerCase();
+    if(q.length<2 || !airports.length){box.style.display='none';return;}
+    const results=airports.filter(a=>(a.iata||'').toLowerCase().includes(q)||(a.city||'').toLowerCase().includes(q)||(a.name||'').toLowerCase().includes(q)).slice(0,12);
+    box.innerHTML=results.map(a=>`<div class="suggestion" data-value="${encodeURIComponent(a.city+' ('+a.iata+')')}"><strong>${a.city} (${a.iata})</strong><small>${a.name} • ${a.country}</small></div>`).join('');
+    box.style.display=results.length?'block':'none';
+    box.querySelectorAll('.suggestion').forEach(el=>el.addEventListener('click',()=>{input.value=decodeURIComponent(el.dataset.value);box.style.display='none'}));
+  });
+  document.addEventListener('click',e=>{if(!input.contains(e.target)&&!box.contains(e.target))box.style.display='none'});
+}
+setupAutocomplete('from','fromSuggestions');
+setupAutocomplete('to','toSuggestions');
+
+$('swap').addEventListener('click',()=>{const t=$('from').value;$('from').value=$('to').value;$('to').value=t});
+
+function updatePassengerSummary(){
+  $('adultCount').textContent=passengers.adults;
+  $('kidCount').textContent=passengers.kids;
+  $('passengerSummary').value=`${passengers.adults} Adult${passengers.adults!==1?'s':''}, ${passengers.kids} Kid${passengers.kids!==1?'s':''}`;
+}
+$('passengerField').addEventListener('click',e=>{if(e.target.closest('.counter'))return;$('passengerPanel').classList.toggle('open')});
+document.querySelectorAll('.counter button').forEach(btn=>btn.addEventListener('click',e=>{
+  e.stopPropagation(); const key=btn.dataset.key, delta=Number(btn.dataset.delta);
+  passengers[key]=Math.max(key==='adults'?1:0,passengers[key]+delta); updatePassengerSummary();
+}));
+document.addEventListener('click',e=>{if(!$('passengerField').contains(e.target))$('passengerPanel').classList.remove('open')});
+
+function setTrip(type){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.type===type));
+  document.querySelector('input[name="trip"][value="'+type+'"]').checked=true;
+  $('returnField').classList.toggle('hidden',type==='oneway');
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>setTrip(t.dataset.type)));
+document.querySelectorAll('input[name="trip"]').forEach(r=>r.addEventListener('change',()=>setTrip(r.value)));
+$('departure').addEventListener('change',()=>{$('returnDate').min=$('departure').value});
+
+function showError(msg){$('error').textContent=msg;$('error').style.display='block'}
+function clearError(){$('error').style.display='none'}
+function getAirportLabel(v){return v.trim()}
+
+function submitBooking(){
+  clearError();
+  const trip=document.querySelector('input[name="trip"]:checked').value;
+  const from=getAirportLabel($('from').value), to=getAirportLabel($('to').value), dep=$('departure').value, ret=$('returnDate').value, cabin=$('cabin').value;
+  if(!from||!to||!dep){showError('Please enter your departure airport, destination airport and departure date.');return}
+  if(from.toLowerCase()===to.toLowerCase()){showError('Departure and destination cannot be the same.');return}
+  if(trip==='roundtrip' && !ret){showError('Please select a return date.');return}
+  if(trip==='roundtrip' && ret<dep){showError('Return date cannot be earlier than departure date.');return}
+  const fmt=d=>new Date(d+'T00:00:00').toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'short',day:'numeric'});
+  let message=`✈️ *FLIGHT BOOKING REQUEST*\n\n`;
+  message+=`*Trip:* ${trip==='roundtrip'?'Round Trip':'One Way'}\n`;
+  message+=`*From:* ${from}\n*To:* ${to}\n*Departure:* ${fmt(dep)}\n`;
+  if(trip==='roundtrip') message+=`*Return:* ${fmt(ret)}\n`;
+  message+=`*Passengers:* ${passengers.adults} Adult${passengers.adults!==1?'s':''}, ${passengers.kids} Kid${passengers.kids!==1?'s':''}\n*Cabin:* ${cabin}\n\n`;
+  message+=`Hello, I would like to check flight availability and price for the above itinerary. Please send me the available options.`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank');
+}
+$('search').addEventListener('click',submitBooking);
+$('mobileBook').addEventListener('click',e=>{e.preventDefault();submitBooking()});
+
+updatePassengerSummary();
+</script>
+</body>
+</html>

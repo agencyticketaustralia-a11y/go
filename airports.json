@@ -1,0 +1,962 @@
+[
+  {
+    "city": "Jakarta",
+    "name": "Soekarno-Hatta International Airport",
+    "iata": "CGK",
+    "country": "Indonesia"
+  },
+  {
+    "city": "Bali",
+    "name": "I Gusti Ngurah Rai International Airport",
+    "iata": "DPS",
+    "country": "Indonesia"
+  },
+  {
+    "city": "Surabaya",
+    "name": "Juanda International Airport",
+    "iata": "SUB",
+    "country": "Indonesia"
+  },
+  {
+    "city": "Medan",
+    "name": "Kualanamu International Airport",
+    "iata": "KNO",
+    "country": "Indonesia"
+  },
+  {
+    "city": "Makassar",
+    "name": "Sultan Hasanuddin International Airport",
+    "iata": "UPG",
+    "country": "Indonesia"
+  },
+  {
+    "city": "Manila",
+    "name": "Ninoy Aquino International Airport",
+    "iata": "MNL",
+    "country": "Philippines"
+  },
+  {
+    "city": "Cebu",
+    "name": "Mactan-Cebu International Airport",
+    "iata": "CEB",
+    "country": "Philippines"
+  },
+  {
+    "city": "Davao",
+    "name": "Francisco Bangoy International Airport",
+    "iata": "DVO",
+    "country": "Philippines"
+  },
+  {
+    "city": "Clark",
+    "name": "Clark International Airport",
+    "iata": "CRK",
+    "country": "Philippines"
+  },
+  {
+    "city": "Singapore",
+    "name": "Singapore Changi Airport",
+    "iata": "SIN",
+    "country": "Singapore"
+  },
+  {
+    "city": "Kuala Lumpur",
+    "name": "Kuala Lumpur International Airport",
+    "iata": "KUL",
+    "country": "Malaysia"
+  },
+  {
+    "city": "Penang",
+    "name": "Penang International Airport",
+    "iata": "PEN",
+    "country": "Malaysia"
+  },
+  {
+    "city": "Bangkok",
+    "name": "Suvarnabhumi Airport",
+    "iata": "BKK",
+    "country": "Thailand"
+  },
+  {
+    "city": "Bangkok",
+    "name": "Don Mueang International Airport",
+    "iata": "DMK",
+    "country": "Thailand"
+  },
+  {
+    "city": "Phuket",
+    "name": "Phuket International Airport",
+    "iata": "HKT",
+    "country": "Thailand"
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "name": "Tan Son Nhat International Airport",
+    "iata": "SGN",
+    "country": "Vietnam"
+  },
+  {
+    "city": "Hanoi",
+    "name": "Noi Bai International Airport",
+    "iata": "HAN",
+    "country": "Vietnam"
+  },
+  {
+    "city": "Da Nang",
+    "name": "Da Nang International Airport",
+    "iata": "DAD",
+    "country": "Vietnam"
+  },
+  {
+    "city": "Phnom Penh",
+    "name": "Phnom Penh International Airport",
+    "iata": "PNH",
+    "country": "Cambodia"
+  },
+  {
+    "city": "Siem Reap",
+    "name": "Siem Reap Angkor International Airport",
+    "iata": "SAI",
+    "country": "Cambodia"
+  },
+  {
+    "city": "Yangon",
+    "name": "Yangon International Airport",
+    "iata": "RGN",
+    "country": "Myanmar"
+  },
+  {
+    "city": "Bandar Seri Begawan",
+    "name": "Brunei International Airport",
+    "iata": "BWN",
+    "country": "Brunei"
+  },
+  {
+    "city": "Vientiane",
+    "name": "Wattay International Airport",
+    "iata": "VTE",
+    "country": "Laos"
+  },
+  {
+    "city": "Dhaka",
+    "name": "Hazrat Shahjalal International Airport",
+    "iata": "DAC",
+    "country": "Bangladesh"
+  },
+  {
+    "city": "Colombo",
+    "name": "Bandaranaike International Airport",
+    "iata": "CMB",
+    "country": "Sri Lanka"
+  },
+  {
+    "city": "Mumbai",
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "iata": "BOM",
+    "country": "India"
+  },
+  {
+    "city": "Delhi",
+    "name": "Indira Gandhi International Airport",
+    "iata": "DEL",
+    "country": "India"
+  },
+  {
+    "city": "Bengaluru",
+    "name": "Kempegowda International Airport",
+    "iata": "BLR",
+    "country": "India"
+  },
+  {
+    "city": "Chennai",
+    "name": "Chennai International Airport",
+    "iata": "MAA",
+    "country": "India"
+  },
+  {
+    "city": "Hyderabad",
+    "name": "Rajiv Gandhi International Airport",
+    "iata": "HYD",
+    "country": "India"
+  },
+  {
+    "city": "Kolkata",
+    "name": "Netaji Subhas Chandra Bose International Airport",
+    "iata": "CCU",
+    "country": "India"
+  },
+  {
+    "city": "Kathmandu",
+    "name": "Tribhuvan International Airport",
+    "iata": "KTM",
+    "country": "Nepal"
+  },
+  {
+    "city": "Male",
+    "name": "Velana International Airport",
+    "iata": "MLE",
+    "country": "Maldives"
+  },
+  {
+    "city": "Karachi",
+    "name": "Jinnah International Airport",
+    "iata": "KHI",
+    "country": "Pakistan"
+  },
+  {
+    "city": "Lahore",
+    "name": "Allama Iqbal International Airport",
+    "iata": "LHE",
+    "country": "Pakistan"
+  },
+  {
+    "city": "Islamabad",
+    "name": "Islamabad International Airport",
+    "iata": "ISB",
+    "country": "Pakistan"
+  },
+  {
+    "city": "Tokyo",
+    "name": "Narita International Airport",
+    "iata": "NRT",
+    "country": "Japan"
+  },
+  {
+    "city": "Tokyo",
+    "name": "Haneda Airport",
+    "iata": "HND",
+    "country": "Japan"
+  },
+  {
+    "city": "Osaka",
+    "name": "Kansai International Airport",
+    "iata": "KIX",
+    "country": "Japan"
+  },
+  {
+    "city": "Nagoya",
+    "name": "Chubu Centrair International Airport",
+    "iata": "NGO",
+    "country": "Japan"
+  },
+  {
+    "city": "Sapporo",
+    "name": "New Chitose Airport",
+    "iata": "CTS",
+    "country": "Japan"
+  },
+  {
+    "city": "Fukuoka",
+    "name": "Fukuoka Airport",
+    "iata": "FUK",
+    "country": "Japan"
+  },
+  {
+    "city": "Seoul",
+    "name": "Incheon International Airport",
+    "iata": "ICN",
+    "country": "South Korea"
+  },
+  {
+    "city": "Busan",
+    "name": "Gimhae International Airport",
+    "iata": "PUS",
+    "country": "South Korea"
+  },
+  {
+    "city": "Beijing",
+    "name": "Beijing Capital International Airport",
+    "iata": "PEK",
+    "country": "China"
+  },
+  {
+    "city": "Beijing",
+    "name": "Beijing Daxing International Airport",
+    "iata": "PKX",
+    "country": "China"
+  },
+  {
+    "city": "Shanghai",
+    "name": "Shanghai Pudong International Airport",
+    "iata": "PVG",
+    "country": "China"
+  },
+  {
+    "city": "Shanghai",
+    "name": "Shanghai Hongqiao International Airport",
+    "iata": "SHA",
+    "country": "China"
+  },
+  {
+    "city": "Guangzhou",
+    "name": "Guangzhou Baiyun International Airport",
+    "iata": "CAN",
+    "country": "China"
+  },
+  {
+    "city": "Shenzhen",
+    "name": "Shenzhen Baoan International Airport",
+    "iata": "SZX",
+    "country": "China"
+  },
+  {
+    "city": "Chengdu",
+    "name": "Chengdu Tianfu International Airport",
+    "iata": "TFU",
+    "country": "China"
+  },
+  {
+    "city": "Chongqing",
+    "name": "Chongqing Jiangbei International Airport",
+    "iata": "CKG",
+    "country": "China"
+  },
+  {
+    "city": "Xi’an",
+    "name": "Xi’an Xianyang International Airport",
+    "iata": "XIY",
+    "country": "China"
+  },
+  {
+    "city": "Hong Kong",
+    "name": "Hong Kong International Airport",
+    "iata": "HKG",
+    "country": "Hong Kong"
+  },
+  {
+    "city": "Macau",
+    "name": "Macau International Airport",
+    "iata": "MFM",
+    "country": "Macau"
+  },
+  {
+    "city": "Taipei",
+    "name": "Taiwan Taoyuan International Airport",
+    "iata": "TPE",
+    "country": "Taiwan"
+  },
+  {
+    "city": "Kaohsiung",
+    "name": "Kaohsiung International Airport",
+    "iata": "KHH",
+    "country": "Taiwan"
+  },
+  {
+    "city": "Sydney",
+    "name": "Sydney Kingsford Smith Airport",
+    "iata": "SYD",
+    "country": "Australia"
+  },
+  {
+    "city": "Melbourne",
+    "name": "Melbourne Airport",
+    "iata": "MEL",
+    "country": "Australia"
+  },
+  {
+    "city": "Brisbane",
+    "name": "Brisbane Airport",
+    "iata": "BNE",
+    "country": "Australia"
+  },
+  {
+    "city": "Perth",
+    "name": "Perth Airport",
+    "iata": "PER",
+    "country": "Australia"
+  },
+  {
+    "city": "Adelaide",
+    "name": "Adelaide Airport",
+    "iata": "ADL",
+    "country": "Australia"
+  },
+  {
+    "city": "Gold Coast",
+    "name": "Gold Coast Airport",
+    "iata": "OOL",
+    "country": "Australia"
+  },
+  {
+    "city": "Auckland",
+    "name": "Auckland Airport",
+    "iata": "AKL",
+    "country": "New Zealand"
+  },
+  {
+    "city": "Christchurch",
+    "name": "Christchurch Airport",
+    "iata": "CHC",
+    "country": "New Zealand"
+  },
+  {
+    "city": "Wellington",
+    "name": "Wellington Airport",
+    "iata": "WLG",
+    "country": "New Zealand"
+  },
+  {
+    "city": "Queenstown",
+    "name": "Queenstown Airport",
+    "iata": "ZQN",
+    "country": "New Zealand"
+  },
+  {
+    "city": "Nadi",
+    "name": "Nadi International Airport",
+    "iata": "NAN",
+    "country": "Fiji"
+  },
+  {
+    "city": "Dubai",
+    "name": "Dubai International Airport",
+    "iata": "DXB",
+    "country": "United Arab Emirates"
+  },
+  {
+    "city": "Abu Dhabi",
+    "name": "Zayed International Airport",
+    "iata": "AUH",
+    "country": "United Arab Emirates"
+  },
+  {
+    "city": "Doha",
+    "name": "Hamad International Airport",
+    "iata": "DOH",
+    "country": "Qatar"
+  },
+  {
+    "city": "Riyadh",
+    "name": "King Khalid International Airport",
+    "iata": "RUH",
+    "country": "Saudi Arabia"
+  },
+  {
+    "city": "Jeddah",
+    "name": "King Abdulaziz International Airport",
+    "iata": "JED",
+    "country": "Saudi Arabia"
+  },
+  {
+    "city": "Dammam",
+    "name": "King Fahd International Airport",
+    "iata": "DMM",
+    "country": "Saudi Arabia"
+  },
+  {
+    "city": "Muscat",
+    "name": "Muscat International Airport",
+    "iata": "MCT",
+    "country": "Oman"
+  },
+  {
+    "city": "Kuwait City",
+    "name": "Kuwait International Airport",
+    "iata": "KWI",
+    "country": "Kuwait"
+  },
+  {
+    "city": "Manama",
+    "name": "Bahrain International Airport",
+    "iata": "BAH",
+    "country": "Bahrain"
+  },
+  {
+    "city": "Amman",
+    "name": "Queen Alia International Airport",
+    "iata": "AMM",
+    "country": "Jordan"
+  },
+  {
+    "city": "Tel Aviv",
+    "name": "Ben Gurion Airport",
+    "iata": "TLV",
+    "country": "Israel"
+  },
+  {
+    "city": "Istanbul",
+    "name": "Istanbul Airport",
+    "iata": "IST",
+    "country": "Türkiye"
+  },
+  {
+    "city": "Istanbul",
+    "name": "Sabiha Gokcen International Airport",
+    "iata": "SAW",
+    "country": "Türkiye"
+  },
+  {
+    "city": "Cairo",
+    "name": "Cairo International Airport",
+    "iata": "CAI",
+    "country": "Egypt"
+  },
+  {
+    "city": "Casablanca",
+    "name": "Mohammed V International Airport",
+    "iata": "CMN",
+    "country": "Morocco"
+  },
+  {
+    "city": "Marrakesh",
+    "name": "Marrakesh Menara Airport",
+    "iata": "RAK",
+    "country": "Morocco"
+  },
+  {
+    "city": "Cape Town",
+    "name": "Cape Town International Airport",
+    "iata": "CPT",
+    "country": "South Africa"
+  },
+  {
+    "city": "Johannesburg",
+    "name": "O.R. Tambo International Airport",
+    "iata": "JNB",
+    "country": "South Africa"
+  },
+  {
+    "city": "Durban",
+    "name": "King Shaka International Airport",
+    "iata": "DUR",
+    "country": "South Africa"
+  },
+  {
+    "city": "Nairobi",
+    "name": "Jomo Kenyatta International Airport",
+    "iata": "NBO",
+    "country": "Kenya"
+  },
+  {
+    "city": "Addis Ababa",
+    "name": "Bole International Airport",
+    "iata": "ADD",
+    "country": "Ethiopia"
+  },
+  {
+    "city": "Lagos",
+    "name": "Murtala Muhammed International Airport",
+    "iata": "LOS",
+    "country": "Nigeria"
+  },
+  {
+    "city": "Accra",
+    "name": "Kotoka International Airport",
+    "iata": "ACC",
+    "country": "Ghana"
+  },
+  {
+    "city": "Zanzibar",
+    "name": "Abeid Amani Karume International Airport",
+    "iata": "ZNZ",
+    "country": "Tanzania"
+  },
+  {
+    "city": "Dar es Salaam",
+    "name": "Julius Nyerere International Airport",
+    "iata": "DAR",
+    "country": "Tanzania"
+  },
+  {
+    "city": "Mauritius",
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "iata": "MRU",
+    "country": "Mauritius"
+  },
+  {
+    "city": "London",
+    "name": "Heathrow Airport",
+    "iata": "LHR",
+    "country": "United Kingdom"
+  },
+  {
+    "city": "London",
+    "name": "Gatwick Airport",
+    "iata": "LGW",
+    "country": "United Kingdom"
+  },
+  {
+    "city": "London",
+    "name": "Stansted Airport",
+    "iata": "STN",
+    "country": "United Kingdom"
+  },
+  {
+    "city": "Paris",
+    "name": "Charles de Gaulle Airport",
+    "iata": "CDG",
+    "country": "France"
+  },
+  {
+    "city": "Paris",
+    "name": "Orly Airport",
+    "iata": "ORY",
+    "country": "France"
+  },
+  {
+    "city": "Amsterdam",
+    "name": "Amsterdam Airport Schiphol",
+    "iata": "AMS",
+    "country": "Netherlands"
+  },
+  {
+    "city": "Frankfurt",
+    "name": "Frankfurt Airport",
+    "iata": "FRA",
+    "country": "Germany"
+  },
+  {
+    "city": "Munich",
+    "name": "Munich Airport",
+    "iata": "MUC",
+    "country": "Germany"
+  },
+  {
+    "city": "Berlin",
+    "name": "Berlin Brandenburg Airport",
+    "iata": "BER",
+    "country": "Germany"
+  },
+  {
+    "city": "Madrid",
+    "name": "Adolfo Suarez Madrid-Barajas Airport",
+    "iata": "MAD",
+    "country": "Spain"
+  },
+  {
+    "city": "Barcelona",
+    "name": "Barcelona-El Prat Airport",
+    "iata": "BCN",
+    "country": "Spain"
+  },
+  {
+    "city": "Rome",
+    "name": "Leonardo da Vinci-Fiumicino Airport",
+    "iata": "FCO",
+    "country": "Italy"
+  },
+  {
+    "city": "Milan",
+    "name": "Malpensa Airport",
+    "iata": "MXP",
+    "country": "Italy"
+  },
+  {
+    "city": "Lisbon",
+    "name": "Humberto Delgado Airport",
+    "iata": "LIS",
+    "country": "Portugal"
+  },
+  {
+    "city": "Zurich",
+    "name": "Zurich Airport",
+    "iata": "ZRH",
+    "country": "Switzerland"
+  },
+  {
+    "city": "Vienna",
+    "name": "Vienna International Airport",
+    "iata": "VIE",
+    "country": "Austria"
+  },
+  {
+    "city": "Brussels",
+    "name": "Brussels Airport",
+    "iata": "BRU",
+    "country": "Belgium"
+  },
+  {
+    "city": "Copenhagen",
+    "name": "Copenhagen Airport",
+    "iata": "CPH",
+    "country": "Denmark"
+  },
+  {
+    "city": "Stockholm",
+    "name": "Stockholm Arlanda Airport",
+    "iata": "ARN",
+    "country": "Sweden"
+  },
+  {
+    "city": "Oslo",
+    "name": "Oslo Airport",
+    "iata": "OSL",
+    "country": "Norway"
+  },
+  {
+    "city": "Helsinki",
+    "name": "Helsinki Airport",
+    "iata": "HEL",
+    "country": "Finland"
+  },
+  {
+    "city": "Athens",
+    "name": "Athens International Airport",
+    "iata": "ATH",
+    "country": "Greece"
+  },
+  {
+    "city": "Dublin",
+    "name": "Dublin Airport",
+    "iata": "DUB",
+    "country": "Ireland"
+  },
+  {
+    "city": "Warsaw",
+    "name": "Warsaw Chopin Airport",
+    "iata": "WAW",
+    "country": "Poland"
+  },
+  {
+    "city": "Prague",
+    "name": "Vaclav Havel Airport Prague",
+    "iata": "PRG",
+    "country": "Czechia"
+  },
+  {
+    "city": "Budapest",
+    "name": "Budapest Ferenc Liszt International Airport",
+    "iata": "BUD",
+    "country": "Hungary"
+  },
+  {
+    "city": "Bucharest",
+    "name": "Henri Coanda International Airport",
+    "iata": "OTP",
+    "country": "Romania"
+  },
+  {
+    "city": "Reykjavik",
+    "name": "Keflavik International Airport",
+    "iata": "KEF",
+    "country": "Iceland"
+  },
+  {
+    "city": "Moscow",
+    "name": "Sheremetyevo International Airport",
+    "iata": "SVO",
+    "country": "Russia"
+  },
+  {
+    "city": "Saint Petersburg",
+    "name": "Pulkovo Airport",
+    "iata": "LED",
+    "country": "Russia"
+  },
+  {
+    "city": "New York",
+    "name": "John F. Kennedy International Airport",
+    "iata": "JFK",
+    "country": "United States"
+  },
+  {
+    "city": "New York",
+    "name": "Newark Liberty International Airport",
+    "iata": "EWR",
+    "country": "United States"
+  },
+  {
+    "city": "New York",
+    "name": "LaGuardia Airport",
+    "iata": "LGA",
+    "country": "United States"
+  },
+  {
+    "city": "Los Angeles",
+    "name": "Los Angeles International Airport",
+    "iata": "LAX",
+    "country": "United States"
+  },
+  {
+    "city": "San Francisco",
+    "name": "San Francisco International Airport",
+    "iata": "SFO",
+    "country": "United States"
+  },
+  {
+    "city": "Seattle",
+    "name": "Seattle-Tacoma International Airport",
+    "iata": "SEA",
+    "country": "United States"
+  },
+  {
+    "city": "Las Vegas",
+    "name": "Harry Reid International Airport",
+    "iata": "LAS",
+    "country": "United States"
+  },
+  {
+    "city": "Chicago",
+    "name": "O’Hare International Airport",
+    "iata": "ORD",
+    "country": "United States"
+  },
+  {
+    "city": "Chicago",
+    "name": "Midway International Airport",
+    "iata": "MDW",
+    "country": "United States"
+  },
+  {
+    "city": "Miami",
+    "name": "Miami International Airport",
+    "iata": "MIA",
+    "country": "United States"
+  },
+  {
+    "city": "Orlando",
+    "name": "Orlando International Airport",
+    "iata": "MCO",
+    "country": "United States"
+  },
+  {
+    "city": "Atlanta",
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "iata": "ATL",
+    "country": "United States"
+  },
+  {
+    "city": "Dallas",
+    "name": "Dallas/Fort Worth International Airport",
+    "iata": "DFW",
+    "country": "United States"
+  },
+  {
+    "city": "Houston",
+    "name": "George Bush Intercontinental Airport",
+    "iata": "IAH",
+    "country": "United States"
+  },
+  {
+    "city": "Washington",
+    "name": "Dulles International Airport",
+    "iata": "IAD",
+    "country": "United States"
+  },
+  {
+    "city": "Boston",
+    "name": "Logan International Airport",
+    "iata": "BOS",
+    "country": "United States"
+  },
+  {
+    "city": "Denver",
+    "name": "Denver International Airport",
+    "iata": "DEN",
+    "country": "United States"
+  },
+  {
+    "city": "Phoenix",
+    "name": "Phoenix Sky Harbor International Airport",
+    "iata": "PHX",
+    "country": "United States"
+  },
+  {
+    "city": "Honolulu",
+    "name": "Daniel K. Inouye International Airport",
+    "iata": "HNL",
+    "country": "United States"
+  },
+  {
+    "city": "Toronto",
+    "name": "Toronto Pearson International Airport",
+    "iata": "YYZ",
+    "country": "Canada"
+  },
+  {
+    "city": "Vancouver",
+    "name": "Vancouver International Airport",
+    "iata": "YVR",
+    "country": "Canada"
+  },
+  {
+    "city": "Montreal",
+    "name": "Montreal-Trudeau International Airport",
+    "iata": "YUL",
+    "country": "Canada"
+  },
+  {
+    "city": "Mexico City",
+    "name": "Mexico City International Airport",
+    "iata": "MEX",
+    "country": "Mexico"
+  },
+  {
+    "city": "Cancun",
+    "name": "Cancun International Airport",
+    "iata": "CUN",
+    "country": "Mexico"
+  },
+  {
+    "city": "Sao Paulo",
+    "name": "Guarulhos International Airport",
+    "iata": "GRU",
+    "country": "Brazil"
+  },
+  {
+    "city": "Rio de Janeiro",
+    "name": "Galeao International Airport",
+    "iata": "GIG",
+    "country": "Brazil"
+  },
+  {
+    "city": "Brasilia",
+    "name": "Brasilia International Airport",
+    "iata": "BSB",
+    "country": "Brazil"
+  },
+  {
+    "city": "Buenos Aires",
+    "name": "Ezeiza International Airport",
+    "iata": "EZE",
+    "country": "Argentina"
+  },
+  {
+    "city": "Santiago",
+    "name": "Arturo Merino Benitez International Airport",
+    "iata": "SCL",
+    "country": "Chile"
+  },
+  {
+    "city": "Lima",
+    "name": "Jorge Chavez International Airport",
+    "iata": "LIM",
+    "country": "Peru"
+  },
+  {
+    "city": "Bogota",
+    "name": "El Dorado International Airport",
+    "iata": "BOG",
+    "country": "Colombia"
+  },
+  {
+    "city": "Quito",
+    "name": "Mariscal Sucre International Airport",
+    "iata": "UIO",
+    "country": "Ecuador"
+  },
+  {
+    "city": "Panama City",
+    "name": "Tocumen International Airport",
+    "iata": "PTY",
+    "country": "Panama"
+  },
+  {
+    "city": "San Jose",
+    "name": "Juan Santamaria International Airport",
+    "iata": "SJO",
+    "country": "Costa Rica"
+  },
+  {
+    "city": "Havana",
+    "name": "Jose Marti International Airport",
+    "iata": "HAV",
+    "country": "Cuba"
+  },
+  {
+    "city": "Punta Cana",
+    "name": "Punta Cana International Airport",
+    "iata": "PUJ",
+    "country": "Dominican Republic"
+  }
+]
